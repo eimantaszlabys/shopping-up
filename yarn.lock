@@ -1533,7 +1533,7 @@
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^5.14.1":
+"@testing-library/jest-dom@^5.16.1":
   version "5.16.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@testing-library/jest-dom/-/jest-dom-5.16.1.tgz#3db7df5ae97596264a7da9696fe14695ba02e51f"
   integrity sha1-PbffWul1liZKfalpb+FGlboC5R8=
@@ -1548,7 +1548,7 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^12.0.0":
+"@testing-library/react@^12.1.2":
   version "12.1.2"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@testing-library/react/-/react-12.1.2.tgz#f1bc9a45943461fa2a598bb4597df1ae044cfc76"
   integrity sha1-8byaRZQ0YfoqWYu0WX3xrgRM/HY=
@@ -1556,7 +1556,7 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.0.0"
 
-"@testing-library/user-event@^13.2.1":
+"@testing-library/user-event@^13.5.0":
   version "13.5.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@testing-library/user-event/-/user-event-13.5.0.tgz#69d77007f1e124d55314a2b73fd204b333b13295"
   integrity sha1-addwB/HhJNVTFKK3P9IEszOxMpU=
@@ -1737,7 +1737,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*", "@types/jest@^27.0.1":
+"@types/jest@*", "@types/jest@^27.4.0":
   version "27.4.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/jest/-/jest-27.4.0.tgz#037ab8b872067cae842a320841693080f9cb84ed"
   integrity sha1-A3q4uHIGfK6EKjIIQWkwgPnLhO0=
@@ -1760,15 +1760,10 @@
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=
 
-"@types/node@*":
+"@types/node@*", "@types/node@^17.0.6":
   version "17.0.6"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/node/-/node-17.0.6.tgz#cc1589c9ee853b389e67e8fb4384e0f250a139b9"
   integrity sha1-zBWJye6FOzieZ+j7Q4Tg8lChObk=
-
-"@types/node@^16.7.13":
-  version "16.11.17"
-  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/node/-/node-16.11.17.tgz#ae146499772e33fc6382e1880bc567e41a528586"
-  integrity sha1-rhRkmXcuM/xjguGIC8Vn5BpShYY=
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1800,7 +1795,7 @@
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha1-zWZ7z90CUhOq+3ylkVqTJZCs3Nw=
 
-"@types/react-dom@^17.0.9":
+"@types/react-dom@^17.0.11":
   version "17.0.11"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
   integrity sha1-4ercPF6GvbX3aE4AJ0riKOe8xGY=
@@ -1814,7 +1809,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@^17.0.20":
+"@types/react@*", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@^17.0.38":
   version "17.0.38"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/react/-/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
   integrity sha1-8kJJ/v2JNX1fpx9zmmhrjXxyAr0=
@@ -1903,7 +1898,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^5.5.0":
+"@typescript-eslint/eslint-plugin@^5.5.0", "@typescript-eslint/eslint-plugin@^5.8.1":
   version "5.8.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.8.1.tgz#97dfaa39f38e99f86801fdf34f9f1bed66704258"
   integrity sha1-l9+qOfOOmfhoAf3zT58b7WZwQlg=
@@ -1929,7 +1924,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@^5.5.0":
+"@typescript-eslint/parser@^5.5.0", "@typescript-eslint/parser@^5.8.1":
   version "5.8.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@typescript-eslint/parser/-/parser-5.8.1.tgz#380f5f1e596b540059998aa3fc80d78f0f9b0d0a"
   integrity sha1-OA9fHllrVABZmYqj/IDXjw+bDQo=
@@ -2964,7 +2959,7 @@ concat-map@0.0.1:
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-confusing-browser-globals@^1.0.11:
+confusing-browser-globals@^1.0.10, confusing-browser-globals@^1.0.11:
   version "1.0.11"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha1-rkDptXzdORVAiigF69OlWFYI3IE=
@@ -3735,6 +3730,25 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-config-airbnb-base@^15.0.0:
+  version "15.0.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/eslint-config-airbnb-base/-/eslint-config-airbnb-base-15.0.0.tgz#6b09add90ac79c2f8d723a2580e07f3925afd236"
+  integrity sha1-awmt2QrHnC+NcjolgOB/OSWv0jY=
+  dependencies:
+    confusing-browser-globals "^1.0.10"
+    object.assign "^4.1.2"
+    object.entries "^1.1.5"
+    semver "^6.3.0"
+
+eslint-config-airbnb@^19.0.4:
+  version "19.0.4"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/eslint-config-airbnb/-/eslint-config-airbnb-19.0.4.tgz#84d4c3490ad70a0ffa571138ebcdea6ab085fdc3"
+  integrity sha1-hNTDSQrXCg/6VxE4683qarCF/cM=
+  dependencies:
+    eslint-config-airbnb-base "^15.0.0"
+    object.assign "^4.1.2"
+    object.entries "^1.1.5"
+
 eslint-config-react-app@^7.0.0:
   version "7.0.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/eslint-config-react-app/-/eslint-config-react-app-7.0.0.tgz#0fa96d5ec1dfb99c029b1554362ab3fa1c3757df"
@@ -3779,7 +3793,7 @@ eslint-plugin-flowtype@^8.0.3:
     lodash "^4.17.21"
     string-natural-compare "^3.0.1"
 
-eslint-plugin-import@^2.25.3:
+eslint-plugin-import@^2.25.3, eslint-plugin-import@^2.25.4:
   version "2.25.4"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/eslint-plugin-import/-/eslint-plugin-import-2.25.4.tgz#322f3f916a4e9e991ac7af32032c25ce313209f1"
   integrity sha1-Mi8/kWpOnpkax68yAywlzjEyCfE=
@@ -8226,7 +8240,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.4.2:
+typescript@^4.5.4:
   version "4.5.4"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
   integrity sha1-oX06AmO/XIcjucUvQ8UITt8Twug=
@@ -8405,7 +8419,7 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-vitals@^2.1.0:
+web-vitals@^2.1.2:
   version "2.1.2"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/web-vitals/-/web-vitals-2.1.2.tgz#3a6c8faebf9097a6ccd17f5f45c9485d8d62dab1"
   integrity sha1-OmyPrr+Ql6bM0X9fRclIXY1i2rE=
