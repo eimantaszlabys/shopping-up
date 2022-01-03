@@ -1,0 +1,38 @@
+.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.card {
+    aspect-ratio: 1 / 1.5;
+    /* border: 3px solid hotpink */
+}
+
+.content {
+    background: white;
+    align-self: end;
+    margin: .5rem .5rem 2rem;
+    padding: .5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.img {
+    display: block;
+    min-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    color: firebrick;
+}
+
+.price {
+    font-size: 1.75rem;
+}
