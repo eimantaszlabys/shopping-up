@@ -12,6 +12,25 @@
     /* border: 3px solid hotpink */
 }
 
+@media (min-width: 40rem) {
+    .img {
+        aspect-ratio: 1 / 1;
+    }
+    
+    .card.featured {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .card.featured .img {
+        aspect-ratio: 1 / 1.25;
+    }
+
+    .card.featured .title {
+        font-size: 1.75rem;
+    }
+}
+
 .content {
     background: white;
     align-self: end;

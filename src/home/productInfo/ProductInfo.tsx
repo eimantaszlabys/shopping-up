@@ -4,7 +4,7 @@ import { ProductInfoProps } from './types';
 import styles from './styles.module.css';
 
 const ProductInfo: FC<ProductInfoProps> = ({
-  title, description, filename, price,
+  title, description, filename, price, rating,
 }) => {
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -12,7 +12,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
   });
 
   return (
-    <div className={classnames(styles.card, styles.stacked)}>
+    <div className={classnames(styles.card, styles.stacked, { [styles.featured]: rating >= 5 })}>
       <img className={styles.img} src={`/products/${filename}`} alt={title} />
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>

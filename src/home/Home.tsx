@@ -11,7 +11,7 @@ const Home: FC = () => {
     height: 600,
     width: 400,
     price: 28.1,
-    rating: 4,
+    rating: 5,
   }, {
     title: 'Sweet fresh stawberry',
     type: 'fruit',
