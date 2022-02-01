@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: './packages/web-server/index.html',
+  template: './server/public/index.html',
   filename: './index.html',
 });
 
@@ -12,10 +12,10 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    './packages/web-app/index.js',
+    './app/index.js',
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '__dist'),
     filename: 'index.js',
   },
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()],

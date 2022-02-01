@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["packages"],
+  "include": ["app", "server"],
   "exclude": ["node_modules", "build"]
 }
