@@ -18,6 +18,7 @@ module.exports = {
     path: path.join(__dirname, '__dist'),
     filename: 'index.js',
   },
+  devtool: 'inline-source-map',
   plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
@@ -29,10 +30,27 @@ module.exports = {
         ],
       },
       {
-        test: /\.(js|ts|tsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: { presets: ['@babel/env', '@babel/preset-react'] },
+        test: /\.(js|ts)$/,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets:  ['@babel/env', '@babel/preset-react'] ,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true
+            }
+          }
+        ]
       },
       {
         test: /\.s?css$/,
@@ -41,6 +59,9 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    },
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };

@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const title = 'xdd ddddsdssssd dsdsd';
+import { Main } from './main/Main';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Main />,
   document.getElementById('root'),
 );
 
