@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './packages/web-server/index.html',
@@ -8,12 +9,16 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   mode: 'development',
-  entry: './packages/web-app/index.js',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    './packages/web-app/index.js',
+  ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {

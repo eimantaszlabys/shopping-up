@@ -2538,7 +2538,7 @@ ansi-escapes@^4.2.1, ansi-escapes@^4.3.1:
   dependencies:
     type-fest "^0.21.3"
 
-ansi-html-community@^0.0.8:
+ansi-html-community@0.0.8, ansi-html-community@^0.0.8:
   version "0.0.8"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/ansi-html-community/-/ansi-html-community-0.0.8.tgz#69fbc4d6ccbe383f9736934ae34c3f8290f1bf41"
   integrity sha1-afvE1sy+OD+XNpNK40w/gpDxv0E=
@@ -4017,6 +4017,11 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
+dom-walk@^0.1.0:
+  version "0.1.2"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+  integrity sha1-DFSL7wSPTR8qlySQAiNgYNqj/YQ=
+
 domelementtype@1:
   version "1.3.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
@@ -5086,6 +5091,14 @@ global-prefix@^3.0.0:
     kind-of "^6.0.2"
     which "^1.3.1"
 
+global@^4.3.0:
+  version "4.4.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+  integrity sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=
+  dependencies:
+    min-document "^2.19.0"
+    process "^0.11.10"
+
 globals@^11.1.0:
   version "11.12.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
@@ -5214,6 +5227,13 @@ history@^5.2.0:
   integrity sha1-fN0xz5usPF0x8JwjHJko+tAAe3w=
   dependencies:
     "@babel/runtime" "^7.7.6"
+
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
 
 hoopy@^0.1.4:
   version "0.1.4"
@@ -6522,7 +6542,7 @@ loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.4.0:
+loader-utils@^1.1.0, loader-utils@^1.4.0:
   version "1.4.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/loader-utils/-/loader-utils-1.4.0.tgz#c579b5e34cb34b1a74edc6c1fb36bfa371d5a613"
   integrity sha1-xXm140yzSxp07cbB+za/o3HVphM=
@@ -6787,6 +6807,13 @@ mimic-fn@^2.1.0:
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
 
+min-document@^2.19.0:
+  version "2.19.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+  dependencies:
+    dom-walk "^0.1.0"
+
 min-indent@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
@@ -6970,6 +6997,11 @@ node-forge@^0.10.0:
   version "0.10.0"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/node-forge/-/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
   integrity sha1-Mt6ir7Ppkm8C7lzoeUkCaRpna/M=
+
+node-forge@^1.2.0:
+  version "1.2.1"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/node-forge/-/node-forge-1.2.1.tgz#82794919071ef2eb5c509293325cec8afd0fd53c"
+  integrity sha1-gnlJGQce8utcUJKTMlzsiv0P1Tw=
 
 node-gyp@^8.4.1:
   version "8.4.1"
@@ -8061,6 +8093,11 @@ process-nextick-args@~2.0.0:
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha1-eCDZsWEgzFXKmud5JoCufbptf+I=
 
+process@^0.11.10:
+  version "0.11.10"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+  integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
+
 progress@^2.0.0:
   version "2.0.3"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
@@ -8101,6 +8138,15 @@ prop-types-extra@^1.1.0:
   dependencies:
     react-is "^16.3.2"
     warning "^4.0.0"
+
+prop-types@^15.6.1:
+  version "15.8.1"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
 
 prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.0"
@@ -8148,6 +8194,11 @@ qs@~6.5.2:
   version "6.5.3"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
   integrity sha1-Ou7/yRln7241wOSI70b7KWq3aq0=
+
+querystring@^0.2.0:
+  version "0.2.1"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/querystring/-/querystring-0.2.1.tgz#40d77615bb09d16902a85c3e38aa8b5ed761c2dd"
+  integrity sha1-QNd2FbsJ0WkCqFw+OKqLXtdhwt0=
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -8271,7 +8322,21 @@ react-error-overlay@^6.0.10:
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/react-error-overlay/-/react-error-overlay-6.0.10.tgz#0fe26db4fa85d9dbb8624729580e90e7159a59a6"
   integrity sha1-D+JttPqF2du4YkcpWA6Q5xWaWaY=
 
-react-is@^16.13.1, react-is@^16.3.2:
+react-hot-loader@^4.13.0:
+  version "4.13.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/react-hot-loader/-/react-hot-loader-4.13.0.tgz#c27e9408581c2a678f5316e69c061b226dc6a202"
+  integrity sha1-wn6UCFgcKmePUxbmnAYbIm3GogI=
+  dependencies:
+    fast-levenshtein "^2.0.6"
+    global "^4.3.0"
+    hoist-non-react-statics "^3.3.0"
+    loader-utils "^1.1.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    shallowequal "^1.1.0"
+    source-map "^0.7.3"
+
+react-is@^16.13.1, react-is@^16.3.2, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
@@ -8810,6 +8875,13 @@ selfsigned@^1.10.11:
   dependencies:
     node-forge "^0.10.0"
 
+selfsigned@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/selfsigned/-/selfsigned-2.0.0.tgz#e927cd5377cbb0a1075302cff8df1042cc2bce5b"
+  integrity sha1-6SfNU3fLsKEHUwLP+N8QQswrzls=
+  dependencies:
+    node-forge "^1.2.0"
+
 "semver@2 || 3 || 4 || 5", semver@^5.6.0:
   version "5.7.1"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
@@ -8909,6 +8981,11 @@ shallow-clone@^3.0.0:
   integrity sha1-jymBrZJTH1UDWwH7IwdppA4C76M=
   dependencies:
     kind-of "^6.0.2"
+
+shallowequal@^1.1.0:
+  version "1.1.0"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  integrity sha1-GI1SHelbkIdAT9TctosT3wrk5/g=
 
 shebang-command@^2.0.0:
   version "2.0.0"
@@ -10030,6 +10107,51 @@ webpack-dev-server@^4.6.0:
     strip-ansi "^7.0.0"
     webpack-dev-middleware "^5.3.0"
     ws "^8.1.0"
+
+webpack-dev-server@^4.7.3:
+  version "4.7.3"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/webpack-dev-server/-/webpack-dev-server-4.7.3.tgz#4e995b141ff51fa499906eebc7906f6925d0beaa"
+  integrity sha1-TplbFB/1H6SZkG7rx5BvaSXQvqo=
+  dependencies:
+    "@types/bonjour" "^3.5.9"
+    "@types/connect-history-api-fallback" "^1.3.5"
+    "@types/serve-index" "^1.9.1"
+    "@types/sockjs" "^0.3.33"
+    "@types/ws" "^8.2.2"
+    ansi-html-community "^0.0.8"
+    bonjour "^3.5.0"
+    chokidar "^3.5.2"
+    colorette "^2.0.10"
+    compression "^1.7.4"
+    connect-history-api-fallback "^1.6.0"
+    default-gateway "^6.0.3"
+    del "^6.0.0"
+    express "^4.17.1"
+    graceful-fs "^4.2.6"
+    html-entities "^2.3.2"
+    http-proxy-middleware "^2.0.0"
+    ipaddr.js "^2.0.1"
+    open "^8.0.9"
+    p-retry "^4.5.0"
+    portfinder "^1.0.28"
+    schema-utils "^4.0.0"
+    selfsigned "^2.0.0"
+    serve-index "^1.9.1"
+    sockjs "^0.3.21"
+    spdy "^4.0.2"
+    strip-ansi "^7.0.0"
+    webpack-dev-middleware "^5.3.0"
+    ws "^8.1.0"
+
+webpack-hot-middleware@^2.25.1:
+  version "2.25.1"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/webpack-hot-middleware/-/webpack-hot-middleware-2.25.1.tgz#581f59edf0781743f4ca4c200fd32c9266c6cf7c"
+  integrity sha1-WB9Z7fB4F0P0ykwgD9MskmbGz3w=
+  dependencies:
+    ansi-html-community "0.0.8"
+    html-entities "^2.1.0"
+    querystring "^0.2.0"
+    strip-ansi "^6.0.0"
 
 webpack-manifest-plugin@^4.0.2:
   version "4.0.2"
