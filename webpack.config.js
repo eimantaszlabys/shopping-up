@@ -24,14 +24,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
-      }, {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
+        loader: 'babel-loader',
+        options: { presets: ['@babel/env', '@babel/preset-react'] },
+      },
+      {
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
 };
