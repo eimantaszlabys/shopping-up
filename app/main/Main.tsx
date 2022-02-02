@@ -5,11 +5,13 @@ import {
     Route
   } from "react-router-dom";
 import { HomePage } from '../homePage';
+import { Navigation } from '../navigation';
 
 
 const Main: FunctionComponent = () => {
     return(
       <BrowserRouter>
+        <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>

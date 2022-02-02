@@ -53,9 +53,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
+        test: /\.css$/,
+
+        include: [
+          path.resolve(__dirname, "not_exist_path")
+      ],
+        use: ['style-loader', 'css-loader']
+      }
     ],
   },
   resolve: {
