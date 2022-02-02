@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -19,16 +20,12 @@ module.exports = {
     filename: 'index.js',
   },
   devtool: 'inline-source-map',
-  plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin()],
+  plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin(),    new MiniCssExtractPlugin({
+    filename : '[name].css',
+    chunkFilename: '[id].css'
+       })],
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-        ],
-      },
       {
         test: /\.(js|ts)$/,
         exclude: /(node_modules)/,
@@ -52,20 +49,45 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.css$/,
-
-        include: [
-          path.resolve(__dirname, "not_exist_path")
-      ],
-        use: ['style-loader', 'css-loader']
-      }
+        {
+                test: /\.module\.s(a|c)ss$/,
+                use: [
+                 'style-loader',
+                  {
+                    loader: 'css-loader',
+                    options: {
+                      modules: true,
+                    sourceMap: true
+                   }
+                 },
+                  {
+                    loader: 'sass-loader',
+                    options: {
+                      sourceMap: true
+                    }
+                  }
+                ]
+            },
+              {
+                test: /\.s(a|c)ss$/,
+                exclude: /\.module.(s(a|c)ss)$/,
+                use: [
+                  'style-loader',
+                  'css-loader',
+                  {
+                    loader: 'sass-loader',
+                    options: {
+                      sourceMap: true
+                    }
+                  }
+              ]
+              }
     ],
   },
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'
     },
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.scss'],
   },
 };

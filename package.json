@@ -30,6 +30,8 @@
     "eslint-config-react-typescript": "^1.0.8",
     "express": "^4.17.2",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
     "react-hot-loader": "^4.13.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

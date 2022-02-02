@@ -1,0 +1,12 @@
+:root {
+    --main-color: red;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+}
