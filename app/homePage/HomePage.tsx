@@ -2,7 +2,9 @@ import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss'
 
 const HomePage: FunctionComponent = () => {
-    return <div className={styles.content}>
+    return <div className={styles.content
+    
+    }>
         <div>aaa</div>
         <div>bb</div>
     </div>
