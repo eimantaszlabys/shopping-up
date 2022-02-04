@@ -5,6 +5,7 @@ const HomePage: FunctionComponent = () => {
   return (
     <div className={styles.content}>
       <div>aaa</div>
+
       <div>aaa</div>
       <div>bb</div>
       <div>aaa</div>
@@ -12,6 +13,7 @@ const HomePage: FunctionComponent = () => {
       <div>aaa</div>
       <div>bb</div>
       <div>aaa</div>
+
       <div>bb</div>
       <div>aaa</div>
       <div>bb</div>

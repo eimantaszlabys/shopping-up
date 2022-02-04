@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "start": "webpack --mode development && node server/index.js",
-    "eslint": "eslint --fix"
+    "eslint": "eslint ./app/**/*.{ts,tsx} --cache",
+    "eslint:ci": "eslint ./app/**/*.{ts,tsx} --max-warnings=0 -o=eslint_report.json -f=json"
   },
   "dependencies": {
     "react": "^17.0.2",

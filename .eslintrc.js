@@ -56,6 +56,12 @@ module.exports = {
         ts: 'never',
         tsx: 'never'
       }
+    ],
+    'import/no-import-module-exports': [
+      'error',
+      {
+        exceptions: ['**/app/index.js']
+      }
     ]
   },
   settings: {
