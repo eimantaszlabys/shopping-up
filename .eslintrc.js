@@ -47,7 +47,16 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['off', { devDependencies: true }],
     'import/namespace': ['off'],
-    'import/extensions': ['error', 'always', { ignorePackages: true }]
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ]
   },
   settings: {
     react: {
