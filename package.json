@@ -9,7 +9,8 @@
   "scripts": {
     "start": "webpack --mode development && node server/index.js",
     "eslint": "eslint ./app/**/*.{ts,tsx} --cache",
-    "eslint:ci": "eslint ./app/**/*.{ts,tsx} --max-warnings=0 -o=eslint_report.json -f=json"
+    "eslint:ci": "eslint ./app/**/*.{ts,tsx} --max-warnings=0 -o=eslint_report.json -f=json",
+    "typecheck": "./node_modules/typescript/bin/tsc"
   },
   "dependencies": {
     "react": "^17.0.2",
