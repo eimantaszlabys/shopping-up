@@ -13,10 +13,10 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    './app/index.js',
+    './src/index.js',
   ],
   output: {
-    path: path.join(__dirname, '__dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'index.js',
   },
   devtool: 'inline-source-map',
