@@ -1,20 +1,25 @@
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: ['webpack-hot-middleware/client', './src/index.js'],
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
+  devServer: {
+    stats: {
+      color: true
+    }
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './server/public/index.html'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
     modules: [__dirname, 'node_modules'],
