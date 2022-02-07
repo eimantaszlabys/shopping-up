@@ -1,93 +1,79 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
-
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: './server/public/index.html',
-  filename: './index.html',
-});
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 
 module.exports = {
   mode: 'development',
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-hot-middleware/client',
-    './src/index.js',
-  ],
+  entry: './src/index.js',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: 'bundle.[hash].js',
+    path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'inline-source-map',
-  plugins: [htmlPlugin, new webpack.HotModuleReplacementPlugin(),    new MiniCssExtractPlugin({
-    filename : '[name].css',
-    chunkFilename: '[id].css'
-       })],
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './server/public/index.html'
+    })
+  ],
+  resolve: {
+    modules: [__dirname, 'node_modules'],
+    extensions: ['*', '.js', '.tsx', '.ts', '.css']
+  },
   module: {
     rules: [
       {
-        test: /\.(js|ts)$/,
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets:  ['@babel/env', '@babel/preset-react'] ,
-            },
-          },
-        ],
+        test: /\.(ts|tsx)$/,
+        loader: require.resolve('babel-loader'),
+        options: {
+          presets: [['react-app', { flow: false, typescript: true }]]
+        }
       },
       {
-        test: /\.tsx?$/,
+        test: /\.(js|jsx)$/,
+        loader: require.resolve('babel-loader'),
+        exclude: [/node_modules/],
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
+      },
+      {
+        test: /\.css$/,
+        exclude: /\.module\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.module\.css$/,
         use: [
+          'style-loader',
           {
-            loader: 'ts-loader',
+            loader: 'css-loader',
             options: {
-              transpileOnly: true
+              importLoaders: 1,
+              modules: {
+                getLocalIdent: getCSSModuleLocalIdent
+              }
             }
           }
         ]
       },
-        {
-                test: /\.module\.s(a|c)ss$/,
-                use: [
-                 'style-loader',
-                  {
-                    loader: 'css-loader',
-                    options: {
-                      modules: true,
-                    sourceMap: true
-                   }
-                 },
-                  {
-                    loader: 'sass-loader',
-                    options: {
-                      sourceMap: true
-                    }
-                  }
-                ]
-            },
-              {
-                test: /\.s(a|c)ss$/,
-                exclude: /\.module.(s(a|c)ss)$/,
-                use: [
-                  'style-loader',
-                  'css-loader',
-                  {
-                    loader: 'sass-loader',
-                    options: {
-                      sourceMap: true
-                    }
-                  }
-              ]
+      {
+        test: /\.module\.(scss|sass)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 3,
+              modules: {
+                getLocalIdent: getCSSModuleLocalIdent
               }
-    ],
-  },
-  resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    },
-    extensions: ['.tsx', '.ts', '.js', '.scss'],
-  },
+            }
+          },
+          'resolve-url-loader',
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ]
+      }
+    ]
+  }
 };
