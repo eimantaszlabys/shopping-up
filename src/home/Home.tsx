@@ -13,7 +13,7 @@ const Home: FunctionComponent = () => {
 
   return (
     <div className={styles.content}>
-      <h1>{isPalindrome ? 'true' : 'false'}</h1>
+      <h1>{String(isPalindrome)}</h1>
       <input onChange={(e) => checkIfPalindrome(e.target.value)} />
     </div>
   );

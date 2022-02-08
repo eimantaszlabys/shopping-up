@@ -13,7 +13,9 @@ describe('Home Tests', () => {
     const inputElement = component.find('input');
 
     const onChange = inputElement.prop('onChange');
-    if (onChange) onChange({ target: { value } });
+    if (onChange) {
+      onChange({ target: { value } } as never);
+    }
 
     const h1Element = component.find('h1');
 
