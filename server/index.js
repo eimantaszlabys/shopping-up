@@ -1,21 +1,22 @@
 const express = require('express');
 const path = require('path');
-
-const app = express();
-
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../webpack.config');
 
-const compailer = webpack(config);
+const app = express();
 
 const port = process.env.PORT || 3000;
 const DIST_DIR = path.join(__dirname, '../dist');
 const HTML_FILE = path.join(DIST_DIR, 'index.html');
 
-app.use(webpackDevMiddleware(compailer, config.devServer));
-app.use(webpackHotMiddleware(compailer));
+if (process.env.NODE_ENV !== 'production') {
+  const compiler = webpack(config);
+
+  app.use(webpackDevMiddleware(compiler, config.devServer));
+  app.use(webpackHotMiddleware(compiler));
+}
 
 app.use(express.static(DIST_DIR, { index: false }));
 

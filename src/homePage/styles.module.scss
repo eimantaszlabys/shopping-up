@@ -1,5 +1,10 @@
 :root {
-    --main-color: red;
+    --main-color: blue;
+}
+
+.isActive {
+    background-color: green !important;
+    transition: background-color 700ms ease-in-out;
 }
 
 .content {
@@ -9,5 +14,5 @@
     justify-content: center;
     align-items: center;
     color: var(--main-color);
-    background: blueviolet;
+    background-color: blueviolet;
 }

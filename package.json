@@ -7,13 +7,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "set NODE_ENV=development&& node ./server/index.js",
-    "build:dev": "set NODE_ENV=development&& webpack --mode=development",
+    "start": "export NODE_ENV=development&& node ./server/index.js --env production",
+    "build": "webpack --mode=production",
     "eslint": "eslint  ./src --ext .tsx,.ts --cache",
     "eslint:ci": "eslint  ./src --ext .tsx,.ts --max-warnings=0 -o=eslint_report.json -f=json",
     "typecheck": "./node_modules/typescript/bin/tsc"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "express": "^4.17.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
