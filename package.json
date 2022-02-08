@@ -7,7 +7,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "export NODE_ENV=development&& node ./server/index.js --env production",
+    "start": "set NODE_ENV=development&& node ./server/index.js --env production",
     "build": "webpack --mode=production",
     "eslint": "eslint  ./src --ext .tsx,.ts --cache",
     "eslint:ci": "eslint  ./src --ext .tsx,.ts --max-warnings=0 -o=eslint_report.json -f=json",
@@ -45,6 +45,7 @@
     "babel-preset-react-app": "^10.0.1",
     "css-loader": "^6.6.0",
     "enzyme-to-json": "^3.6.2",
+    "error-overlay-webpack-plugin": "^1.0.0",
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",

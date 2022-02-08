@@ -14,7 +14,7 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html');
 if (process.env.NODE_ENV !== 'production') {
   const compiler = webpack(config);
 
-  app.use(webpackDevMiddleware(compiler, config.devServer));
+  app.use(webpackDevMiddleware(compiler));
   app.use(webpackHotMiddleware(compiler));
 }
 

@@ -41,7 +41,7 @@ const Home: FunctionComponent = () => {
       </div>
       <div className={styles.sections}>
         {sections.map(({ image, title, explanatory }) => (
-          <div className={styles.section}>
+          <div className={styles.section} key={title}>
             <div>{image}</div>
             <div className={styles.info}>
               <h1>{title}</h1>

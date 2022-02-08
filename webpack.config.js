@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,16 +11,13 @@ module.exports = {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
-  devServer: {
-    stats: {
-      color: true
-    }
-  },
+  devtool: 'cheap-module-source-map',
   plugins: [
     new HtmlWebPackPlugin({
       template: './server/public/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new ErrorOverlayPlugin()
   ],
   resolve: {
     modules: [__dirname, 'node_modules'],
