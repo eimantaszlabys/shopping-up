@@ -34,3 +34,29 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-3rem);
+
+
+    & > .section {
+        display: flex;
+        flex-direction: row;
+        max-width: 25rem;
+        padding: 1rem;
+        background-color: var(--main-color);
+        transition: transform .2s ease-in-out;
+
+        & > .info {
+            flex: 1;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            border: 1px solid yellowgreen
+        }
+    }
+}
