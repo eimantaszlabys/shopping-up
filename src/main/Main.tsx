@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HomePage } from '../homePage';
+import { Home } from '../home';
 
 const Main: FunctionComponent = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   </BrowserRouter>
 );

@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { HomePage } from './HomePage';
+import { Home } from './Home';
 
-describe('HomePage Tests', () => {
+describe('Home Tests', () => {
   it.each([
     ['a', true],
     ['aa', true],
     ['cfg', false]
   ])('Should check if palindrome value (%p, %p)', (value: string, expected: boolean) => {
-    const component = shallow(<HomePage />);
+    const component = shallow(<Home />);
 
     const inputElement = component.find('input');
 

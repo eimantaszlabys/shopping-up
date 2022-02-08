@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState } from 'react';
 import { isEqual } from 'lodash';
 import styles from './styles.module.scss';
 
-const HomePage: FunctionComponent = () => {
+const Home: FunctionComponent = () => {
   const [isPalindrome, setIsPalindrome] = useState(false);
 
   const checkIfPalindrome = (originalValue: string) => {
@@ -19,4 +19,4 @@ const HomePage: FunctionComponent = () => {
   );
 };
 
-export { HomePage };
+export { Home };

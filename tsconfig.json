@@ -25,6 +25,7 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
+    "downlevelIteration": true
   },
   "include": ["src", "server"],
   "exclude": ["node_modules", "dist"]
