@@ -1,18 +1,36 @@
 :root {
-    --main-color: blue;
+    --main-color: #ffffff;
 }
 
-.isActive {
-    background-color: green !important;
-    transition: background-color 700ms ease-in-out;
+body {
+    background-color: var(--main-color);
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-color);
-    background-color: blueviolet;
+    background-image: url(./images/pexels-photo-3285196.jpeg);
+    background-position: 50% 50%;
+    background-size: cover;
+    object-fit: cover;
+    display: block;
+    overflow: auto;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+
+    &  > h1 {
+        margin: 244px 633px 0 0;
+        font-weight: 700;
+        font-size: 4rem;
+        color: var(--main-color);
+    }
+
+    & > h3 {
+        font-weight: 700;
+        color: var(--main-color);
+        margin: 0 auto;
+    }
+
+    & > h3:nth-of-type(2) {
+        font-style: italic;
+        margin-bottom: 3rem;
+    }
 }

@@ -1,21 +1,18 @@
-import React, { FunctionComponent, useState } from 'react';
-import { isEqual } from 'lodash';
+import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 
 const Home: FunctionComponent = () => {
-  const [isPalindrome, setIsPalindrome] = useState(false);
-
-  const checkIfPalindrome = (originalValue: string) => {
-    const revOriginalValue = [...originalValue].reverse().join('');
-
-    setIsPalindrome(isEqual(originalValue, revOriginalValue));
-  };
-
   return (
-    <div className={styles.content}>
-      <h1>{String(isPalindrome)}</h1>
-      <input onChange={(e) => checkIfPalindrome(e.target.value)} />
-    </div>
+    <>
+      <div className={styles.menu}>
+        <button>Menu</button>
+      </div>
+      <div className={styles.content}>
+        <h1>IT Services</h1>
+        <h3>We Provide Outsourced</h3>
+        <h3>for Small & Mid-sized Businesses</h3>
+      </div>
+    </>
   );
 };
 
