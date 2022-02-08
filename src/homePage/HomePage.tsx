@@ -1,16 +1,20 @@
-import classnames from 'classnames';
 import React, { FunctionComponent, useState } from 'react';
+import { isEqual } from 'lodash';
 import styles from './styles.module.scss';
 
 const HomePage: FunctionComponent = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isPalindrome, setIsPalindrome] = useState(false);
+
+  const checkIfPalindrome = (originalValue: string) => {
+    const revOriginalValue = [...originalValue].reverse().join('');
+
+    setIsPalindrome(isEqual(originalValue, revOriginalValue));
+  };
 
   return (
-    <div className={classnames(styles.content, isActive && styles.isActive)}>
-      <div>a</div>
-      <button type="button" onClick={() => setIsActive((x) => !x)}>
-        aaa
-      </button>
+    <div className={styles.content}>
+      <h1>{isPalindrome ? 'true' : 'false'}</h1>
+      <input onChange={(e) => checkIfPalindrome(e.target.value)} />
     </div>
   );
 };
