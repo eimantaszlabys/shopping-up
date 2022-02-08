@@ -6,7 +6,7 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: ['webpack-hot-middleware/client', './src/index.js'],
+  entry: ['./src/index.js', 'webpack-hot-middleware/client'],
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')

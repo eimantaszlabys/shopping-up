@@ -35,7 +35,7 @@ const Home: FunctionComponent = () => {
         <button type="button">Menu</button>
       </div>
       <div className={styles.content}>
-        <h1>IT Services</h1>
+        <h1>ITd Services</h1>
         <h3>We Provide Outsourced</h3>
         <h3>for Small & Mid-sized Businesses</h3>
       </div>
