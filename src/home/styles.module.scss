@@ -11,8 +11,13 @@
     font-size: 4rem;
 }
 
-.subHeaderSection {
-    gap: 2rem;
+.gridSection {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    gap: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 25rem);
     grid-template-rows: repeat(3, 100px);
