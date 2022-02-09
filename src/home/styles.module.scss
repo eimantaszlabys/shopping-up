@@ -11,12 +11,12 @@
     font-size: 4rem;
 }
 
-.gridSection {
+.part1gridSection {
     display: flex;
     justify-content: center;
 }
 
-.grid {
+.part1grid {
     gap: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 25rem);
@@ -57,3 +57,51 @@
     }
 }
 
+.part2gridSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.part2grid {
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 36rem);
+    grid-template-rows: repeat(2, 13rem);
+
+    & > .header {
+        font-size: 3rem;
+    }
+
+    & > .image5 {
+        width: 18rem;
+        height: 18rem;
+        object-fit: cover;
+        margin-left: auto;
+    }
+
+    & .sectionNumber {
+        background-color: black;
+        color: white;
+        width: max-content;
+        padding: .4rem .6rem;
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    & > .infoSection {
+        grid-area: 1/ 2;
+
+        &  > .info {
+            display: flex;
+            padding: 2rem 0;
+
+            & > p {
+                font-weight: 200;
+                font-size: large;
+                padding-right: 2rem;
+                margin: auto;
+            }
+        }
+    }
+}
