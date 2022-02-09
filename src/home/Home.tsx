@@ -22,8 +22,8 @@ const Home: FunctionComponent = () => {
         'Sample text. Click to select the text box. Click again or double click to start editing the text.'
     },
     {
-      image: 'Image',
-      title: 'Logistics',
+      image: 'Images',
+      title: 'Logisticdds',
       explanatory:
         'Sample text. Click to select the text box. Click again or double click to start editing the text.'
     }
