@@ -8,6 +8,27 @@ import image4 from './images/9489047.jpeg';
 import image5 from './images/10161997.jpeg';
 
 const Home: FunctionComponent = () => {
+  const customItems = [
+    {
+      number: '01',
+      info: 'Sample text. Click to select the text box. Click again or double click to start editing the text.'
+    },
+    {
+      info: '​The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting our customers’ expectations. One example of this has been to use modern technology and the introduction of the real time tracking our teams using GPS. '
+    },
+    {
+      number: '02',
+      info: 'Sample text. Click to select the text box. Click again or double click to start editing the text.'
+    },
+    {
+      info: '​The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting our customers’ expectations. One example of this has been to use modern technology and the introduction of the real time tracking our teams using GPS. '
+    },
+    {
+      number: '03',
+      info: 'Sample text. Click to select the text box. Click again or double click to start editing the text.'
+    }
+  ];
+
   return (
     <>
       <h3 className={styles.subHeader}>Fashion house</h3>
@@ -26,27 +47,12 @@ const Home: FunctionComponent = () => {
           ​We collaborate with brands and agencies to create memorable experiences.
         </h2>
         <div className={styles.infoSection}>
-          <div className={styles.info}>
-            <p>
-              Sample text. Click to select the text box. Click again or double click to start
-              editing the text.
-            </p>
-            <div className={styles.sectionNumber}>01</div>
-          </div>
-          <div className={styles.info}>
-            <p>
-              ​The principal reason we continue to adapt and evolve our business model is to ensure
-              that we are meeting our customers’ expectations. One example of this has been to use
-              modern technology and the introduction of the real time tracking our teams using GPS. 
-            </p>
-          </div>
-          <div className={styles.info}>
-            <p>
-              Sample text. Click to select the text box. Click again or double click to start
-              editing the text.
-            </p>
-            <div className={styles.sectionNumber}>02</div>
-          </div>
+          {customItems.map((item) => (
+            <div className={styles.info}>
+              <p>{item.info}</p>
+              {item.number && <div className={styles.sectionNumber}>{item.number}</div>}
+            </div>
+          ))}
         </div>
       </div>
     </>
