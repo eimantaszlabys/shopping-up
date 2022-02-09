@@ -22,7 +22,7 @@ module.exports = {
   ],
   resolve: {
     modules: [__dirname, 'node_modules'],
-    extensions: ['*', '.js', '.tsx', '.ts', '.css']
+    extensions: ['*', '.js', '.tsx', '.ts', '.css', '.scss']
   },
   module: {
     rules: [
@@ -45,14 +45,14 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /\.module\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader?sourceMap']
       },
       {
         test: /\.module\.css$/,
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
+            loader: 'css-loader?sourceMap',
             options: {
               importLoaders: 1,
               modules: {
@@ -67,7 +67,7 @@ module.exports = {
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
+            loader: 'css-loader?sourceMap',
             options: {
               importLoaders: 3,
               modules: {
@@ -76,7 +76,7 @@ module.exports = {
             }
           },
           'resolve-url-loader',
-          { loader: 'sass-loader', options: { sourceMap: true } }
+          { loader: 'sass-loader?sourceMap', options: { sourceMap: true } }
         ]
       }
     ]

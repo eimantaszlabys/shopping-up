@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { isArray } from 'lodash';
 import styles from './styles.module.scss';
 
 const Home: FunctionComponent = () => {
@@ -40,15 +41,16 @@ const Home: FunctionComponent = () => {
         <h3>for Small & Mid-sized Businesses</h3>
       </div>
       <div className={styles.sections}>
-        {sections.map(({ image, title, explanatory }) => (
-          <div className={styles.section} key={title}>
-            <div>{image}</div>
-            <div className={styles.info}>
-              <h1>{title}</h1>
-              <span>{explanatory}</span>
+        {isArray(sections) &&
+          sections.map(({ image, title, explanatory }) => (
+            <div className={styles.section} key={title}>
+              <div>{image}</div>
+              <div className={styles.info}>
+                <h1>{title}</h1>
+                <span>{explanatory}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </>
   );

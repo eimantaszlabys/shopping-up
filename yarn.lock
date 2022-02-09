@@ -1249,6 +1249,11 @@
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash@^4.14.178":
+  version "4.14.178"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
+  integrity sha1-NB9tIkfbUo1KE927N0vNyAQG9Pg=
+
 "@types/mime@^1":
   version "1.3.2"
   resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
@@ -2233,9 +2238,9 @@ camelcase@^6.2.0:
   integrity sha1-VoW5XrIJrJwMF3Rnd4ychN9Yupo=
 
 caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001286:
-  version "1.0.30001309"
-  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/caniuse-lite/-/caniuse-lite-1.0.30001309.tgz#e0ee78b9bec0704f67304b00ff3c5c0c768a9f62"
-  integrity sha1-4O54ub7AcE9nMEsA/zxcDHaKn2I=
+  version "1.0.30001310"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/caniuse-lite/-/caniuse-lite-1.0.30001310.tgz#da02cd07432c9eece6992689d1b84ca18139eea8"
+  integrity sha1-2gLNB0MsnuzmmSaJ0bhMoYE57qg=
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -6411,10 +6416,10 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-error-overlay@^6.0.10, react-error-overlay@^6.0.9:
-  version "6.0.10"
-  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/react-error-overlay/-/react-error-overlay-6.0.10.tgz#0fe26db4fa85d9dbb8624729580e90e7159a59a6"
-  integrity sha1-D+JttPqF2du4YkcpWA6Q5xWaWaY=
+react-error-overlay@6.0.9, react-error-overlay@^6.0.10, react-error-overlay@^6.0.9:
+  version "6.0.9"
+  resolved "https://artifactory.danskenet.net:443/artifactory/api/npm/joined-npm-build/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
+  integrity sha1-PHQwEMk1lgjDdezWvHbzXZOZWwo=
 
 react-hot-loader@^4.13.0:
   version "4.13.0"
