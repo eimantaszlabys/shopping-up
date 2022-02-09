@@ -78,6 +78,14 @@ module.exports = {
           'resolve-url-loader',
           { loader: 'sass-loader?sourceMap', options: { sourceMap: true } }
         ]
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'static/media/[name].[hash:8].[ext]'
+        }
       }
     ]
   }

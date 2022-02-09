@@ -1,58 +1,23 @@
 import React, { FunctionComponent } from 'react';
-import { isArray } from 'lodash';
 import styles from './styles.module.scss';
+import image1 from './images/10084175.jpeg';
+import image2 from './images/10211524.jpeg';
+import image3 from './images/9852577.jpeg';
+import image4 from './images/9489047.jpeg';
 
 const Home: FunctionComponent = () => {
-  const sections = [
-    {
-      image: 'Image',
-      title: 'Copywriting',
-      explanatory:
-        'Sample text. Click to select the text box. Click again or double click to start editing the text.'
-    },
-    {
-      image: 'Image',
-      title: 'Graphic Design',
-      explanatory:
-        'Sample text. Click to select the text box. Click again or double click to start editing the text.'
-    },
-    {
-      image: 'Image',
-      title: 'Development',
-      explanatory:
-        'Sample text. Click to select the text box. Click again or double click to start editing the text.'
-    },
-    {
-      image: 'Images',
-      title: 'Logisticdds',
-      explanatory:
-        'Sample text. Click to select the text box. Click again or double click to start editing the text.'
-    }
-  ];
-
   return (
-    <>
-      <div>
-        <button type="button">Menu</button>
+    <div>
+      <h3 className={styles.subHeader}>Fashion house</h3>
+      <h1 className={styles.header}>Fashion</h1>
+
+      <div className={styles.subHeaderSection}>
+        <img className={styles.image1} src={image1} alt="image1" />
+        <img className={styles.image2} src={image2} alt="image2" />
+        <img className={styles.image3} src={image3} alt="image3" />
+        <img className={styles.image4} src={image4} alt="image4" />
       </div>
-      <div className={styles.content}>
-        <h1>ITd Services</h1>
-        <h3>We Provide Outsourced</h3>
-        <h3>for Small & Mid-sized Businesses</h3>
-      </div>
-      <div className={styles.sections}>
-        {isArray(sections) &&
-          sections.map(({ image, title, explanatory }) => (
-            <div className={styles.section} key={title}>
-              <div>{image}</div>
-              <div className={styles.info}>
-                <h1>{title}</h1>
-                <span>{explanatory}</span>
-              </div>
-            </div>
-          ))}
-      </div>
-    </>
+    </div>
   );
 };
 
