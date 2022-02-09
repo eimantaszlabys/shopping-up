@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
   const compiler = webpack(config);
 
   app.use(webpackDevMiddleware(compiler));
-  app.use(webpackHotMiddleware(compiler));
+  app.use(webpackHotMiddleware(compiler, { overlay: true }));
 }
 
 app.use(express.static(DIST_DIR, { index: false }));

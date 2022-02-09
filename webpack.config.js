@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 module.exports = {
+  target: ['web', 'es5'],
   mode: 'development',
   entry: ['./src/index.js', 'webpack-hot-middleware/client'],
   output: {
@@ -14,11 +15,10 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   plugins: [
     new HtmlWebPackPlugin({
-      template: './server/public/index.html',
-      title: 'Development'
+      template: './server/public/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new FriendlyErrorsWebpackPlugin()
+    new ErrorOverlayPlugin()
   ],
   resolve: {
     modules: [__dirname, 'node_modules'],
