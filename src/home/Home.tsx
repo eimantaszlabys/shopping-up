@@ -31,7 +31,7 @@ const Home: FunctionComponent = () => {
     }
   ];
 
-  const [cookies] = useCookies();
+  const [cookies] = useCookies(['shopping-up']);
   const navigate = useNavigate();
 
   console.log(cookies);

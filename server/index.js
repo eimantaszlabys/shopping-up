@@ -30,10 +30,10 @@ app.get('/', (req, res) => {
 app.get('/auth/login', (req, res, next) => {
   let randomNumber = Math.random().toString();
   randomNumber = randomNumber.substring(2, randomNumber.length);
-  res.cookie('shopping-up', randomNumber, { maxAge: 900000, httpOnly: true });
+  res.cookie('shopping-up', randomNumber, { maxAge: 5000, httpOnly: false });
 
-  res.redirect('/');
   next();
+  res.redirect('/');
 });
 
 app.listen(port, () => {
