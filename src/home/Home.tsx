@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import classnames from 'classnames';
+import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
 import image1 from './images/10084175.jpeg';
 import image2 from './images/10211524.jpeg';
@@ -29,8 +31,20 @@ const Home: FunctionComponent = () => {
     }
   ];
 
+  const [cookies] = useCookies();
+  const navigate = useNavigate();
+
+  console.log(cookies);
+
   return (
     <>
+      {cookies['shopping-up'] ? (
+        <div>s</div>
+      ) : (
+        <button type="button" onClick={() => navigate('/login')}>
+          Login
+        </button>
+      )}
       <h3 className={styles.subHeader}>Fashion house</h3>
       <h1 className={styles.header}>Fashion</h1>
 
@@ -44,7 +58,7 @@ const Home: FunctionComponent = () => {
       <div className={classnames(styles.part2gridSection, styles.part2grid)}>
         <img className={styles.image5} src={image5} alt="image5" />
         <h2 className={styles.header}>
-          ​We collaborate with brands and agencies to create memorable experiences.
+          collaborate with brands and agencies to create memorable experiences.
         </h2>
         <div className={styles.infoSection}>
           {customItems.map((item) => (
